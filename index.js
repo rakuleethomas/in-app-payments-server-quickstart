@@ -51,6 +51,7 @@ app.post('/chargePoints', async (request, response) => {
   try {
     const listLocationsResponse = await locationsApi.listLocations();
     const locationId = listLocationsResponse.result.locations[0].id;
+    const ptsAmount = requestBody.points
     const createOrderRequest = getPointsOrderRequest(locationId, ptsAmount);
     const createOrderResponse = await ordersApi.createOrder(createOrderRequest);
 
