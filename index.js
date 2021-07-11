@@ -135,7 +135,7 @@ function getPointsOrderRequest(locationId, ptsAmount){
           name: "Points",
           quantity: ptsAmount,
           basePriceMoney: {
-            amount: ptsAmount,
+            amount: 100,
             currency: "USD"
           }
         }
